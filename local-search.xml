@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>瞎写CNN中遇到的问题</title>
+    <link href="/2023/04/11/%E7%9E%8E%E5%86%99CNN%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <url>/2023/04/11/%E7%9E%8E%E5%86%99CNN%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>问题：Expected 2D (unbatched) or 3D (batched) input to conv1d, but got input of size: [12]<br>原因：输入转换成3维向量reshape(1,1,-1)</p><p>问题：’MSELoss’ object has no attribute ‘backward’<br>原因：criterion &#x3D; nn.MSELoss() 忘了写()</p><p>问题：y_pred在CNN里跑了一遍没有值是none<br>原因：网络forward忘了写return 玛德</p><p>问题：loss &#x3D; criterion(y_pred,y_train)   Found dtype Double but expected Float<br>原因：loss &#x3D; criterion(a,b) a b 两个一个是float32一个是float64不统一</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>op</title>
     <link href="/2023/04/09/op/"/>
     <url>/2023/04/09/op/</url>
